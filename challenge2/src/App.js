@@ -4,6 +4,7 @@ import Validation from './Validation/Validation';
 import Char from './Char/Char';
 
 class App extends Component {
+
   state = {
     userInput: ''
   }
@@ -14,10 +15,9 @@ class App extends Component {
 
   deleteCharHandler = (index) => {
     const text = this.state.userInput.split('');
-
     text.splice(index, 1);
     const updatedText = text.join('');
-    this.setState({userInput: updatedText});
+    this.setState({ userInput: updatedText });
   }
 
   render() {
@@ -27,12 +27,13 @@ class App extends Component {
         character={ch}
         key={index}
         clicked={() => this.deleteCharHandler(index)}
-      />;
+      />
     });
+
     return (
       <div className="App">
-
-        <input type="text"
+        <input
+          type="text"
           onChange={this.inputChangedHandler}
           value={this.state.userInput} />
         <p>{this.state.userInput}</p>
