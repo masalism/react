@@ -7,15 +7,14 @@ const char = (props) => {
         padding: '16px',
         margin: '16px',
         border: '1px solid black',
-        textAling: 'center',
-        cursor: 'pointer'
-    }
+        textAlign: 'center'
+    };
 
     return (
-        <div style={style} onClick={props.clicked}>
+        <div style={style} onClick={props.clicked} >
             {props.character}
         </div>
-    )
+    );
 }
 
 export default char;
